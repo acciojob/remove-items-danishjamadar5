@@ -1,14 +1,11 @@
 //your JS code here. If required.
 function deleteElement() {
-     let selectElement=document.getElementById("colorSelect");
-	let selectedValue=selectElement.value;
-	let childrenList=selectElement.children;
+	// Get the dropdown list element by its id
+  var colorSelect = document.getElementById("colorSelect");
 
-	for(let i=0;i<childrenList;i++)
-		{
-			if(selectedValue===childrenList[i].value)
-			{
-				childrenList[i].remove();
-			}
-		}
+  // Get the selected option index
+  var selectedIndex = colorSelect.selectedIndex;
+
+  // Remove the selected option from the dropdown list
+  colorSelect.remove(selectedIndex);
 }
